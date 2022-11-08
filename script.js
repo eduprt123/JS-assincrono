@@ -43,3 +43,6 @@ Promise.all(conjuntoCeps).then(respostas => console.log(respostas));
 //await. Vale ressaltar que o await somente funciona com uma função assincrona.
 // Para fazer a verificação de erro, utilizamos o async - await, e para checar os erros, utilizamos o try, catch,
 //para capturar eventuais erros da requisição;
+
+let cep = document.getElementById('cep');
+cep.addEventListener('focusout', () => consultaCEP(cep.value));
